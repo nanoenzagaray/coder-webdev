@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - fernandoenzagaray.com</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  
+  <link rel="stylesheet" href="./css/style.css">    
+</head>
+<body>
+  <div class="layout">
+
+
+    <header >
+      <div class="header__logoContainer">
+        <a href="index.html" id="logo-link">
+          <img src="./images/logo.png" alt="Logo" />
+        </a>
+      </div> 
+      <nav class="header__nav"style=" text-align: center">
+        <ul class="nav">
+          <li class="nav-item">
+            <a  class="nav-link" href="index.html">home</a>  
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="solutions.html">solutions</a>             
+          </li>                
+          <li class="nav-item"> 
+            <a class="nav-link" href="projects.html">projects</a>
+          </li>     
+          <li class="nav-item">
+            <a class="nav-link" href="myself.html">myself</a> 
+          </li>            
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">contact</a>
+          </li>
+        </ul>
+      </nav> 
+    </header>
+
+
+    <section class="contact-section section-content"> 
+      <h1>let's create something</h1>       		
+      <form action="#" method="post">
+        <fieldset>
+          <legend>
+            describe your project
+          </legend>	
+  
+          <label for="nombre">your name:</label>
+          <input type="text" name="nombre" placeholder="your name">        
+          <br />
+          
+          
+          <label for="apellido">your email:</label>
+          <input type="text" name="apellido" placeholder="your email">
+          <br>
+        
+          
+          <label for="e-civil">project type:</label>
+          <select name="e-civil">
+            <option>PHP</option>
+            <option>HTML/CSS</option>
+            <option>E-commerce</option>
+            <option>Domains</option>
+            <option>Other solutions</option>
+          </select>
+          <br>
+  
+          <label for="project-info">your project:</label>
+          <textarea name="project-info" placeholder="your project"></textarea>
+          <br>            
+          
+          <label for="newsletter">subscribe to my news:</label>
+          <input type="checkbox" name="newsletter" value="1">
+          <br>        
+  
+          <br />
+  
+          <input type="reset" value="Clear Form">
+          <input type="button" value="Send" data-toggle="modal" data-target="#myModal" >
+  
+        </fieldset>	
+      </form>
+    </section>
+
+    <section class="section-imagen-complementaria">
+        <img src="./images/contact.svg"  alt="Imagen Home" style="margin-top: 50px;">
+    </section>
+
+    <section class="section-idea">
+      <h2>Have a project?</h2>
+      <a class="button button-primary" href="mailto:nanoenzagaray@gmail.com">Send me an email</a>
+    </section>
+
+
+    <footer>
+      info@fernandoenzagaray.com
+    </footer>  
+  
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Message sent</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          
+        </div>
+        <div class="modal-body">
+          <p>I'll get back to you as soon as I can</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
