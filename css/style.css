@@ -113,7 +113,11 @@ fieldset input[type=text], select, textarea {
 .layout {
   text-align: center;
   display: grid;
-  grid-template-areas: "header "  "content" "imagen" "idea" "footer";
+  grid-template-areas: "header "
+  "content"
+ "imagen"
+ "idea"
+ "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-column-gap: 50px;
@@ -130,7 +134,7 @@ header a {
   color: white; }
 
 footer {
-  grid-area: footer; }
+  grid-area: footer;   padding-bottom: 50px;}
 
 section {
   padding: 20px; }
@@ -286,7 +290,10 @@ a.button:hover::before {
   .layout {
     text-align: center;
     display: grid;
-    grid-template-areas: "header header" "content imagen" "idea idea" "footer footer";
+    grid-template-areas: "header header"
+ "content imagen"
+ "idea idea"
+ "footer footer";
     grid-template-columns: 5fr 3fr;
     grid-template-rows: auto 1fr auto 100px;
     grid-column-gap: 50px;
