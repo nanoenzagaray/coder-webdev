@@ -1,17 +1,27 @@
 {
-  "name": "clase-11",
+  "name": "fernandoenzagaray.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fernando Enzagaray. Full Stack Developer.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "author": "",
+  "author": "Fernando Enzagaray",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanoenzagaray/coder-webdev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nanoenzagaray/coder-webdev/issues"
+  },
+  "homepage": "https://github.com/nanoenzagaray/coder-webdev#readme",
+  "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+  "watch-css": "nodemon -e scss -x \"npm run build-css\""
 }

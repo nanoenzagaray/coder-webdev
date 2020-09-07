@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&family=Source+Sans+Pro:ital,wght@0,300;1,200;1,400;1,700&display=swap');
 
-
+$bgPrimary: #000;
+$txtDarkBg: #fff;
+$borderRad: 25px;
 
 html, body{
   font-family: 'Source Sans Pro', sans-serif;
@@ -21,7 +23,7 @@ hr{
 
 p{
   text-align: center; 
-  padding: 50px;
+  padding: 30px 20px;
   display: block;
   max-width: 800px;  
   margin: 0 auto !important;
@@ -108,14 +110,60 @@ fieldset input[type=text], select, textarea{
   font-weight: 400;
 }
 
-.content__paragraph-destacado{
-  
+
+.content__paragraph--head{  
+  font-weight: 600; 
+  margin-top: 25px !important;
+}
+
+.content__paragraph--destacado{  
   font-weight: 600;
+  border-radius: $borderRad;
+  transition: all 200ms ease-out;  
+}
+
+.content__paragraph--destacado:hover{  
+  background-color: $bgPrimary;
+  color: $txtDarkBg;
+  scale: 1.1;
+  
 }
 
 
+.portfolioItem{
+  img{
+    height: 200px;
+    width: auto;
+  }
 
+}
 
+.myself-section{
+  .card{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto !important;
+    max-width: 800px;
+    img {
+      width: auto !important;
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      border-radius:5px;
+      box-shadow:0 0 10px rgba(0,0,0,0.63);      
+    }
+  }
+  .card-text{
+    text-align: left !important;
+
+    b{
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
 
 /* GRID LAYOUT MOBILE */
 
@@ -124,8 +172,9 @@ fieldset input[type=text], select, textarea{
   display: grid;
   grid-template-areas: 
     "header "
-    "imagen"
+
     "content"
+    "imagen"
     "idea"
     "footer";
   grid-template-columns: 1fr;
@@ -141,12 +190,13 @@ fieldset input[type=text], select, textarea{
 
 header{
   grid-area: header;
-  background-color: #1e1f26;
-  padding: 50px;
+  background-color: $bgPrimary;
+  padding: 20px 10px;
 }
 
 header a{
   color: white ;
+  
 }
 
 
@@ -215,14 +265,15 @@ nav ul li a{
   padding-right:20px;
   text-decoration: none;
   font-size: 20px;
-  transition: opacity 200ms ease-out;
+  transition: all 200ms ease-out;
   opacity: 0.8;
 }
 
 nav ul li a:hover{
   opacity: 1;
   text-decoration: underline;
-
+  color: $txtDarkBg;
+  scale: 1.1;
 }
 
 
@@ -231,7 +282,7 @@ nav ul li a:hover{
 
 
 a.button{
-  padding: 15px 100px;
+  padding: 15px 50px;
   margin: 10px 4px;
   color: black;  
   text-transform: uppercase;
@@ -294,6 +345,7 @@ a.button:hover::before{
 }
 
 .solutionCotainer{
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -306,20 +358,49 @@ a.button:hover::before{
   transition: all 200ms ease-in-out;
   opacity: 0.5;
   flex-grow: 1;
+  border-radius: $borderRad;
 }
 
 .solutionItem:hover{
-  background-color: #1e1f26;
-  color: white;
+  background-color: $bgPrimary;
+  color: $txtDarkBg;
   padding: 100px 0px;
-  
-  
-    opacity: 1;
+  margin: 50px 0px; 
+  opacity: 1;
 }
 
-.solutionItem:hover > h2{
+.solutionItem:hover > h2{  
+  color: white;  
+}
+
+.portfolioItem{
+  width: auto;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1{
+    margin: 0px;
+   }
+  h2{
+   margin: 0px 0px 30px 0px ;
+  }
+
+  h2 a{
+    font-weight: 800;
+    color: black;
+    font-size: 14px;  
+    transition: all 200ms ease-in-out;
+    padding: 5px 10px;
+
+    border-radius: $borderRad;
+  }
   
-  color: white;
+  h2 a:hover{
+    background-color: $bgPrimary;
+    color: $txtDarkBg;
+    scale: 1.1; 
+  }  
   
 }
 
@@ -327,6 +408,14 @@ a.button:hover::before{
 
 /* DESKTOP */
 @media only screen and (min-width: 768px){
+
+  .portfolioItem{
+    img{
+      height: auto;
+      width: auto;
+    }
+  
+  }  
   .layout{
     text-align: center;
     display: grid;

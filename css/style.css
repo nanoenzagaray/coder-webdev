@@ -14,7 +14,7 @@ hr {
 
 p {
   text-align: center;
-  padding: 50px;
+  padding: 30px 20px;
   display: block;
   max-width: 800px;
   margin: 0 auto !important; }
@@ -70,14 +70,50 @@ fieldset input[type=text], select, textarea {
 .content__paragraph {
   font-weight: 400; }
 
-.content__paragraph-destacado {
-  font-weight: 600; }
+.content__paragraph--head {
+  font-weight: 600;
+  margin-top: 25px !important; }
+
+.content__paragraph--destacado {
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 200ms ease-out; }
+
+.content__paragraph--destacado:hover {
+  background-color: #000;
+  color: #fff;
+  scale: 1.1; }
+
+.portfolioItem img {
+  height: 200px;
+  width: auto; }
+
+.myself-section .card {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto !important;
+  max-width: 800px; }
+  .myself-section .card img {
+    width: auto !important;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.63); }
+
+.myself-section .card-text {
+  text-align: left !important; }
+  .myself-section .card-text b {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px; }
 
 /* GRID LAYOUT MOBILE */
 .layout {
   text-align: center;
   display: grid;
-  grid-template-areas: "header " "imagen" "content" "idea" "footer";
+  grid-template-areas: "header "  "content" "imagen" "idea" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-column-gap: 50px;
@@ -87,8 +123,8 @@ fieldset input[type=text], select, textarea {
 
 header {
   grid-area: header;
-  background-color: #1e1f26;
-  padding: 50px; }
+  background-color: #000;
+  padding: 20px 10px; }
 
 header a {
   color: white; }
@@ -136,16 +172,18 @@ nav ul li a {
   padding-right: 20px;
   text-decoration: none;
   font-size: 20px;
-  transition: opacity 200ms ease-out;
+  transition: all 200ms ease-out;
   opacity: 0.8; }
 
 nav ul li a:hover {
   opacity: 1;
-  text-decoration: underline; }
+  text-decoration: underline;
+  color: #fff;
+  scale: 1.1; }
 
 /* BUTTONS */
 a.button {
-  padding: 15px 100px;
+  padding: 15px 50px;
   margin: 10px 4px;
   color: black;
   text-transform: uppercase;
@@ -196,6 +234,7 @@ a.button:hover::before {
   max-width: 1200px; }
 
 .solutionCotainer {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly; }
@@ -205,19 +244,45 @@ a.button:hover::before {
   background-color: white;
   transition: all 200ms ease-in-out;
   opacity: 0.5;
-  flex-grow: 1; }
+  flex-grow: 1;
+  border-radius: 25px; }
 
 .solutionItem:hover {
-  background-color: #1e1f26;
-  color: white;
+  background-color: #000;
+  color: #fff;
   padding: 100px 0px;
+  margin: 50px 0px;
   opacity: 1; }
 
 .solutionItem:hover > h2 {
   color: white; }
 
+.portfolioItem {
+  width: auto;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
+  .portfolioItem h1 {
+    margin: 0px; }
+  .portfolioItem h2 {
+    margin: 0px 0px 30px 0px; }
+  .portfolioItem h2 a {
+    font-weight: 800;
+    color: black;
+    font-size: 14px;
+    transition: all 200ms ease-in-out;
+    padding: 5px 10px;
+    border-radius: 25px; }
+  .portfolioItem h2 a:hover {
+    background-color: #000;
+    color: #fff;
+    scale: 1.1; }
+
 /* DESKTOP */
 @media only screen and (min-width: 768px) {
+  .portfolioItem img {
+    height: auto;
+    width: auto; }
   .layout {
     text-align: center;
     display: grid;
