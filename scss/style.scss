@@ -350,6 +350,10 @@ a.button:hover::before{
   display: block;
   width: 100%;
   text-align: center;
+  img{
+    width: auto;
+    max-width: 100px;
+  }
 }
 
 .myselfSection ol li{
