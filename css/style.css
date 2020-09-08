@@ -142,7 +142,8 @@ header a {
   color: white; }
 
 footer {
-  grid-area: footer; }
+  grid-area: footer;
+  padding-bottom: 50px; }
 
 section {
   padding: 20px; }
