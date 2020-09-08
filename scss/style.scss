@@ -61,7 +61,7 @@ ol{
   
 
 h1{
-  font-size: 25px;
+  font-size: 35px;
   margin-top: 60px;
 }
 
@@ -135,7 +135,11 @@ fieldset input[type=text], select, textarea{
     height: 200px;
     width: auto;
   }
+}
 
+hr.portfolioItemDivider{
+  width: 150px;
+  margin-top:  150px;
 }
 
 .myself-section{
@@ -144,15 +148,31 @@ fieldset input[type=text], select, textarea{
     margin-right: auto;
     width: auto !important;
     max-width: 800px;
+
+
+    
     img {
+
       width: auto !important;
-      max-width: 200px;
+      max-width: 250px;
       margin-left: auto;
       margin-right: auto;
       margin-top: 50px;
-      border-radius:5px;
+      border-radius:50px;
       box-shadow:0 0 10px rgba(0,0,0,0.63);      
+      transition: all 200ms ease-out;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+                   
     }
+    
+    img:hover {
+      border-radius:0px;
+      -webkit-filter: sepia(0);
+      filter: sepia(0);  
+      scale: 1.1;
+    }
+    
   }
   .card-text{
     text-align: left !important;
@@ -360,12 +380,16 @@ a.button:hover::before{
   opacity: 0.5;
   flex-grow: 1;
   border-radius: $borderRad;
+
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
 }
 
 .solutionItem:hover{
   background-color: $bgPrimary;
   color: $txtDarkBg;
-  padding: 100px 0px;
+  padding: 80px 20px;
   margin: 50px 0px; 
   opacity: 1;
 }
@@ -409,6 +433,12 @@ a.button:hover::before{
 
 /* DESKTOP */
 @media only screen and (min-width: 768px){
+
+  h1{
+    font-size: 40px;
+    margin-top: 60px;
+  }
+  
 
   .portfolioItem{
     img{

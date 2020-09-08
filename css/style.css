@@ -36,7 +36,7 @@ ol {
   list-style: none; }
 
 h1 {
-  font-size: 25px;
+  font-size: 35px;
   margin-top: 60px; }
 
 h1, h2, h3, h4, h5 {
@@ -88,6 +88,10 @@ fieldset input[type=text], select, textarea {
   height: 200px;
   width: auto; }
 
+hr.portfolioItemDivider {
+  width: 150px;
+  margin-top: 150px; }
+
 .myself-section .card {
   margin-left: auto;
   margin-right: auto;
@@ -95,12 +99,20 @@ fieldset input[type=text], select, textarea {
   max-width: 800px; }
   .myself-section .card img {
     width: auto !important;
-    max-width: 200px;
+    max-width: 250px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.63); }
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+    transition: all 200ms ease-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  .myself-section .card img:hover {
+    border-radius: 0px;
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+    scale: 1.1; }
 
 .myself-section .card-text {
   text-align: left !important; }
@@ -113,11 +125,7 @@ fieldset input[type=text], select, textarea {
 .layout {
   text-align: center;
   display: grid;
-  grid-template-areas: "header "
-  "content"
- "imagen"
- "idea"
- "footer";
+  grid-template-areas: "header "  "content" "imagen" "idea" "footer";
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-column-gap: 50px;
@@ -134,7 +142,7 @@ header a {
   color: white; }
 
 footer {
-  grid-area: footer;   padding-bottom: 50px;}
+  grid-area: footer; }
 
 section {
   padding: 20px; }
@@ -250,11 +258,13 @@ a.button:hover::before {
   opacity: 0.5;
   flex-grow: 1;
   border-radius: 25px; }
+  .solutionItem:not(:first-child) {
+    margin-top: 50px; }
 
 .solutionItem:hover {
   background-color: #000;
   color: #fff;
-  padding: 100px 0px;
+  padding: 80px 20px;
   margin: 50px 0px;
   opacity: 1; }
 
@@ -284,16 +294,16 @@ a.button:hover::before {
 
 /* DESKTOP */
 @media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 60px; }
   .portfolioItem img {
     height: auto;
     width: auto; }
   .layout {
     text-align: center;
     display: grid;
-    grid-template-areas: "header header"
- "content imagen"
- "idea idea"
- "footer footer";
+    grid-template-areas: "header header" "content imagen" "idea idea" "footer footer";
     grid-template-columns: 5fr 3fr;
     grid-template-rows: auto 1fr auto 100px;
     grid-column-gap: 50px;
