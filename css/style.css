@@ -84,6 +84,11 @@ fieldset input[type=text], select, textarea {
   color: #fff;
   scale: 1.1; }
 
+.nav-link {
+  display: block;
+  padding: 5px;
+  font-size: 16px; }
+
 .portfolioItem img {
   height: 200px;
   width: auto; }
@@ -298,6 +303,10 @@ a.button:hover::before {
 
 /* DESKTOP */
 @media only screen and (min-width: 768px) {
+  .nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    font-size: 20px; }
   h1 {
     font-size: 40px;
     margin-top: 60px; }
