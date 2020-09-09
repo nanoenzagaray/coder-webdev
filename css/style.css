@@ -48,7 +48,7 @@ fieldset {
   width: auto;
   max-width: 1200px;
   margin: 40px auto;
-  padding: 50px;
+  padding: 20px;
   max-width: 800px; }
 
 fieldset input[type=text], select, textarea {
@@ -84,6 +84,11 @@ fieldset input[type=text], select, textarea {
   color: #fff;
   scale: 1.1; }
 
+.content__paragraph--destacado:active {
+  background-color: #000;
+  color: #fff;
+  scale: 1.1; }
+
 .nav-link {
   display: block;
   padding: 5px;
@@ -114,6 +119,11 @@ hr.portfolioItemDivider {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
   .myself-section .card img:hover {
+    border-radius: 0px;
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+    scale: 1.1; }
+  .myself-section .card img:active {
     border-radius: 0px;
     -webkit-filter: sepia(0);
     filter: sepia(0);
@@ -199,8 +209,30 @@ nav ul li a:hover {
   color: #fff;
   scale: 1.1; }
 
+nav ul li a:active {
+  opacity: 1;
+  text-decoration: underline;
+  color: #fff;
+  scale: 1.1; }
+
 /* BUTTONS */
-a.button {
+.btn.button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .btn.button:hover {
+    background-color: #000;
+    color: white; }
+  .btn.button:active {
+    background-color: #000;
+    color: white; }
+  .btn.button:focus {
+    background-color: #000;
+    color: white; }
+
+.button {
   padding: 15px 50px;
   margin: 10px 4px;
   color: black;
@@ -210,7 +242,7 @@ a.button {
   text-decoration: none;
   display: inline-block; }
 
-a.button::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -226,10 +258,10 @@ a.button::before {
   opacity: 0;
   transition: all .3s; }
 
-a.button:hover {
+.button:hover {
   color: white; }
 
-a.button:hover::before {
+.button:hover::before {
   opacity: 1;
   color: white;
   background-color: black;
@@ -264,11 +296,14 @@ a.button:hover::before {
   flex-basis: 250px;
   background-color: white;
   transition: all 200ms ease-in-out;
-  opacity: 0.5;
   flex-grow: 1;
-  border-radius: 25px; }
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 25px 10px; }
   .solutionItem:not(:first-child) {
     margin-top: 50px; }
+  .solutionItem p:last-of-type {
+    padding-bottom: 0; }
 
 .solutionItem:hover {
   background-color: #000;
@@ -278,6 +313,16 @@ a.button:hover::before {
   opacity: 1; }
 
 .solutionItem:hover > h2 {
+  color: white; }
+
+.solutionItem:active {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  margin: 50px 0px;
+  opacity: 1; }
+
+.solutionItem:active > h2 {
   color: white; }
 
 .portfolioItem {
@@ -300,9 +345,24 @@ a.button:hover::before {
     background-color: #000;
     color: #fff;
     scale: 1.1; }
+  .portfolioItem h2 a:active {
+    background-color: #000;
+    color: #fff;
+    scale: 1.1; }
+
+.carousel-inner {
+  border: 1px solid black;
+  padding: 0px;
+  border-radius: 25px; }
 
 /* DESKTOP */
 @media only screen and (min-width: 768px) {
+  .carousel-inner {
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 25px; }
+  .solutionItem {
+    padding: 50px; }
   .nav-link {
     display: block;
     padding: .5rem 1rem;

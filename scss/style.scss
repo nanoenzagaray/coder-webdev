@@ -79,7 +79,7 @@ fieldset{
   width: auto;
   max-width: 1200px;
   margin: 40px auto;
-  padding: 50px;
+  padding: 20px;
   max-width: 800px; 
 }
 
@@ -128,6 +128,14 @@ fieldset input[type=text], select, textarea{
   scale: 1.1;
   
 }
+
+.content__paragraph--destacado:active{  
+  background-color: $bgPrimary;
+  color: $txtDarkBg;
+  scale: 1.1;
+  
+}
+
 
 
 .nav-link {
@@ -180,6 +188,12 @@ hr.portfolioItemDivider{
       scale: 1.1;
     }
     
+    img:active {
+      border-radius:0px;
+      -webkit-filter: sepia(0);
+      filter: sepia(0);  
+      scale: 1.1;
+    }    
   }
   .card-text{
     text-align: left !important;
@@ -273,8 +287,6 @@ section{
 
 /* NAV */
 
-
-
 nav{
   width: 100%;
   display: block;
@@ -304,12 +316,42 @@ nav ul li a:hover{
   scale: 1.1;
 }
 
+nav ul li a:active{
+  opacity: 1;
+  text-decoration: underline;
+  color: $txtDarkBg;
+  scale: 1.1;
+}
 
 /* BUTTONS */
 
+.btn.button{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+  &:hover{
+    background-color: $bgPrimary;
+    color: white;
+  }
+
+  &:active{
+    background-color: $bgPrimary;
+    color: white;
+  }  
+
+  &:focus{
+    background-color: $bgPrimary;
+    color: white;
+  }  
+}
 
 
-a.button{
+
+
+.button{
   padding: 15px 50px;
   margin: 10px 4px;
   color: black;  
@@ -320,7 +362,7 @@ a.button{
   display: inline-block;
 
 }
-a.button::before{
+.button::before{
     content: "";
     position: absolute;
     top: 0;
@@ -336,10 +378,10 @@ a.button::before{
     opacity: 0;
     transition: all .3s
 }
-a.button:hover{
+.button:hover{
   color: white;
 }
-a.button:hover::before{
+.button:hover::before{
   opacity: 1;
   color: white;
   background-color: black;
@@ -388,12 +430,17 @@ a.button:hover::before{
   flex-basis: 250px;
   background-color: white;
   transition: all 200ms ease-in-out;
-  opacity: 0.5;
+  
   flex-grow: 1;
   border-radius: $borderRad;
+  border: 1px solid black;
+  padding: 25px 10px;
 
   &:not(:first-child) {
     margin-top: 50px;
+  }
+  p:last-of-type{
+    padding-bottom: 0;
   }
 }
 
@@ -408,6 +455,19 @@ a.button:hover::before{
 .solutionItem:hover > h2{  
   color: white;  
 }
+
+.solutionItem:active{
+  background-color: $bgPrimary;
+  color: $txtDarkBg;
+  padding: 80px 20px;
+  margin: 50px 0px; 
+  opacity: 1;
+}
+
+.solutionItem:active > h2{  
+  color: white;  
+}
+
 
 .portfolioItem{
   width: auto;
@@ -437,14 +497,38 @@ a.button:hover::before{
     color: $txtDarkBg;
     scale: 1.1; 
   }  
+
+  h2 a:active{
+    background-color: $bgPrimary;
+    color: $txtDarkBg;
+    scale: 1.1; 
+  }  
   
 }
 
+
+.carousel-inner{
+  border: 1px solid black;
+  padding: 0px;
+  border-radius: 25px;
+}
 
 
 /* DESKTOP */
 @media only screen and (min-width: 768px){
 
+  .carousel-inner{
+    border: 1px solid black;
+    padding: 50px;
+    border-radius: 25px;
+  }
+  
+  .solutionItem{
+
+    padding: 50px;
+
+  }  
+  
   .nav-link {
     display: block;
     padding: .5rem 1rem;
