@@ -43,24 +43,25 @@
 
     <section class="contact-section section-content"> 
       <h1>Let's create something</h1>       		
-      <form action="#" method="post">
+      <form action="./send.php" method="post">
         <fieldset>
           <legend>
             describe your project.
           </legend>	
   
-          <label for="nombre">your name:</label>
-          <input type="text" name="nombre" placeholder="your name">        
+          <label for="name">your name:</label>
+          <input type="text" name="name" placeholder="your name">        
           <br />
           
+
           
-          <label for="apellido">your email:</label>
-          <input type="text" name="apellido" placeholder="your email">
+          <label for="email">your email:</label>
+          <input type="text" name="email" placeholder="your email">
           <br>
         
           
-          <label for="e-civil">project type:</label>
-          <select name="e-civil">
+          <label for="projectType">project type:</label>
+          <select name="projectType">
             <option>Shopify</option>
             <option>WordPress</option>
             <option>HTML/CSS</option>
@@ -70,14 +71,14 @@
           </select>
           <br>
   
-          <label for="project-info">your project:</label>
-          <textarea name="project-info" placeholder="your project"></textarea>
+          <label for="projectInfo">your project:</label>
+          <textarea name="projectInfo" placeholder="your project"></textarea>
 
   
           <br />
           <br />
           <div>
-        <input type="button" value="Send" class="btn button" data-toggle="modal" data-target="#myModal" >
+            <input type="submit" value="Send" class="btn button" data-toggle="modal" data-target="#myModal" >
           </div>
             
   
@@ -126,5 +127,25 @@
     </div>
   </div>
   
+  <script>
+      function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+      }  
+
+      if(getUrlParameter('sent')){
+        $("#myModal").modal()
+      }
+  </script>
 </body>
 </html>
