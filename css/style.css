@@ -134,7 +134,7 @@ hr.portfolioItemDivider {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-row-gap: 10px;
   justify-items: stretch;
   align-items: flex-start; }
 
